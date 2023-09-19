@@ -1,0 +1,60 @@
+.panel {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .panel-heading {
+    background-color: #007bff; /* Blue background for the panel header */
+    color: #fff; /* White text color */
+    padding: 15px;
+  }
+  
+  .panel-body {
+    padding: 20px;
+  }
+  
+  /* Style for the table */
+  .table {
+    width: 100%;
+  }
+  
+  .table th {
+    background-color: #007bff; /* Blue background for column headers */
+    color: #fff; /* White text color */
+    text-align: left;
+  }
+  
+  .table-striped tbody tr:nth-child(odd) {
+    background-color: #f5f5f5; /* Light gray background for odd rows */
+  }
+  
+  /* Style for table cells */
+  .table td {
+    vertical-align: middle;
+  }
+  
+  /* Style for buttons */
+  .btn {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-danger {
+    background-color: #d9534f; /* Red background for delete button */
+    border-color: #d9534f;
+    color: #fff; /* White text color */
+  }
+  
+  .btn-info {
+    background-color: #5bc0de; /* Light blue background for update and details buttons */
+    border-color: #5bc0de;
+    color: #fff; /* White text color */
+  }
+  
+  /* Style for active link */
+  .nav-item.active .nav-link {
+    font-weight: bold;
+    color: #007bff; /* Blue text color for active link */
+  }

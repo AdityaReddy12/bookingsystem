@@ -1,0 +1,223 @@
+<body>
+  <app-header></app-header>
+  <div>
+    <div class="container">
+      <form class="border p-4" (ngSubmit)="onSubmit()" #formName="ngForm">
+        <h3 class="text-center mb-4">Book Appointment</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="col-6 mb-3">
+              <label for="studentId" class="form-label stid">Patient ID</label>
+              <input
+                type="text"
+                class="form-control stidd"
+                id="studentId"
+                required
+                [(ngModel)]="student.studentId"
+                name="studentId"
+                pattern="[0-9]{5,}"
+                placeholder="Enter Patient ID"
+              />
+              <div *ngIf="formName.controls['studentId'].untouched && formName.submitted">
+                <div class="alert alert-danger">
+                  Patient ID is required.
+                </div>
+              </div>
+              <div *ngIf="formName.controls['studentId'].invalid && (formName.controls['studentId'].dirty || formName.controls['studentId'].touched)">
+                <div class="alert alert-danger">
+                  Patient ID must be at least 5 digits long and contain only numbers.
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="firstName" class="form-label">Full Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                required
+                [(ngModel)]="student.firstName"
+                name="firstName"
+                placeholder="Enter Full Name"
+              />
+              <div *ngIf="formName.controls['firstName'].untouched && formName.submitted">
+                <div class="alert alert-danger">
+                  Full Name is required.
+                </div>
+              </div>
+              <div *ngIf="formName.controls['firstName'].invalid && (formName.controls['firstName'].dirty || formName.controls['firstName'].touched)">
+                <div class="alert alert-danger">
+                  Full Name must be filled.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="contactNo" class="form-label">Contact No.</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="contactNo"
+                required
+                [(ngModel)]="student.contactNo"
+                name="contactNo"
+                pattern="[0-9]{10}"
+                placeholder="Enter Contact No."
+              />
+              <div *ngIf="formName.controls['contactNo'].untouched && formName.submitted">
+                <div class="alert alert-danger">
+                  Contact No. is required.
+                </div>
+              </div>
+              <div *ngIf="formName.controls['contactNo'].invalid && (formName.controls['contactNo'].dirty || formName.controls['contactNo'].touched)">
+                <div class="alert alert-danger">
+                  Please enter a valid 10-digit phone number.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email ID</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                required
+                [(ngModel)]="student.email"
+                name="email"
+                placeholder="Enter Email ID"
+              />
+              <div *ngIf="formName.controls['email'].untouched && formName.submitted">
+                <div class="alert alert-danger">
+                  Email ID is required.
+                </div>
+              </div>
+              <div *ngIf="formName.controls['email'].invalid && (formName.controls['email'].dirty || formName.controls['email'].touched)">
+                <div class="alert alert-danger">
+                  Please enter a valid email address.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="lastName" class="form-label">Date of Appointment</label>
+              <input
+                type="date"
+                class="form-control"
+                id="lastName"
+                required
+                [(ngModel)]="student.lastName"
+                name="lastName"
+                placeholder="Select Date of Appointment"
+              />
+              <div *ngIf="formName.controls['lastName'].untouched && formName.submitted">
+                <div class="alert alert-danger">
+                  Date of Appointment is required.
+                </div>
+              </div>
+              <div *ngIf="formName.controls['lastName'].invalid && (formName.controls['lastName'].dirty || formName.controls['lastName'].touched)">
+                <div class="alert alert-danger">
+                  Date of Appointment must be filled.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="address" class="form-label">Time Slot</label>
+              <select
+                class="form-control"
+                id="address"
+                required
+                [(ngModel)]="student.address"
+                name="address"
+                placeholder="Select a time slot"
+              >
+                <option value="">Select a time slot</option>
+                <option value="9:00am - 10:00am">9:00am - 10:00am</option>
+                <option value="11:00am - 12:00pm">11:00am - 12:00pm</option>
+                <option value="1:00pm - 2:00pm">1:00pm - 2:00pm</option>
+                <option value="3:00pm - 4:00pm">3:00pm - 4:00pm</option>
+                <option value="5:00pm - 6:00pm">5:00pm - 6:00pm</option>
+              </select>
+              <div *ngIf="formName.controls['address'].untouched && formName.submitted">
+                <div class="alert alert-danger">
+                  Time Slot is required.
+                </div>
+              </div>
+              <div *ngIf="formName.controls['address'].invalid && (formName.controls['address'].dirty || formName.controls['address'].touched)">
+                <div class="alert alert-danger">
+                  Time Slot must be filled.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="courseId" class="form-label">Doctor</label>
+              <select
+                class="form-control"
+                id="courseId"
+                required
+                [(ngModel)]="student.courseId"
+                name="courseId"
+                placeholder="Select a Doctor"
+              >
+                <option value="">Select a Doctor</option>
+                <option value="Doctor A Cardiologist">Doctor A (Cardiologist)</option>
+                <option value="Doctor B ENT">Doctor B (ENT)</option>
+                <option value="Doctor C Ophthalmologist">Doctor C (Ophthalmologist)</option>
+                <option value="Doctor D Psychiatrist">Doctor D (Psychiatrist)</option>
+                <option value="Doctor D General Physician">Doctor D (General Physician)</option>
+              </select>
+              <div *ngIf="formName.controls['courseId'].untouched && formName.submitted">
+                <div class="alert alert-danger">
+                  Doctor selection is required.
+                </div>
+              </div>
+              <div *ngIf="formName.controls['courseId'].invalid && (formName.controls['courseId'].dirty || formName.controls['courseId'].touched)">
+                <div class="alert alert-danger">
+                  Doctor selection must be filled.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <label for="gender" class="form-label">Gender</label>
+                <select
+                  class="form-control"
+                  id="gender"
+                  required
+                  [(ngModel)]="student.gender"
+                  name="gender"
+                  placeholder="Select your Gender"
+                >
+                  <option value="">Select your Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Others">Others</option>
+                </select>
+                <div *ngIf="formName.controls['gender'].untouched && formName.submitted">
+                  <div class="alert alert-danger">
+                    Gender is required.
+                  </div>
+                </div>
+                <div *ngIf="formName.controls['gender'].invalid && (formName.controls['gender'].dirty || formName.controls['gender'].touched)">
+                  <div class="alert alert-danger">
+                    Gender must be filled.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

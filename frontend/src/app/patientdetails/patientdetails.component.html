@@ -1,0 +1,48 @@
+<app-header></app-header>
+
+<h2>Student Details</h2>
+
+<hr />
+<body>
+  <div *ngIf="student">
+    <table border="1" class="center">
+      <tr>
+        <td><b>Full Name:   </b></td>
+        <td>{{ student.firstName }}</td>
+      </tr>
+      <tr>
+        <td><b>Date of Appointment:   </b></td>
+        <td>{{ student.lastName }}</td>
+      </tr>
+      <tr>
+        <td><b>Email ID:   </b></td>
+        <td>{{ student.email }}</td>
+      </tr>
+      <tr>
+        <td><b>Contact No.:</b></td>
+        <td>{{ student.contactNo }}</td>
+      </tr>
+      <tr>
+        <td><b>Time Slot:   </b></td>
+        <td>{{ student.address }}</td>
+      </tr>
+      <tr>
+        <td><b>Doctor:   </b></td>
+        <td>{{ student.courseId }}</td>
+      </tr>
+      <tr>
+        <td><b>Gender:   </b></td>
+        <td>{{ student.gender }}</td>
+      </tr>
+      <tr>
+        <td><b>Patient Id:   </b></td>
+        <td>{{ student.studentId }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <br />
+  <br />
+  <button (click)="list()" class="btn btn-primary">Back to Students List</button
+  ><br />
+</body>

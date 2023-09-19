@@ -1,0 +1,46 @@
+/*img {
+    background-image: url(https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sbGVnZSUyMGNhbXB1c3xlbnwwfHwwfHw%3D&w=1000&q=80);
+    background-size: cover;
+    opacity: 0.7;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 93vh;
+}*/
+
+.image {
+    position: relative;
+  }
+  .image img {
+    width: 100vw;
+    height: 91vh;
+  }
+  .image b {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px black;
+  }
+  .image a {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 4px black;
+  }
+
+  .get-started-btn {
+    background-color: #4CAF50; /* Set the background color */
+    border: none; /* Remove the border */
+    color: white; /* Set the text color */
+    padding: 10px 20px; /* Add padding */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it inline */
+    font-size: 16px; /* Set font size */
+    margin-top: 10px; /* Add some space between the image and button */
+    border-radius: 5px; /* Add some rounded edges */
+  }

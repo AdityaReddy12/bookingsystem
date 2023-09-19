@@ -1,0 +1,26 @@
+.navbar {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 24px;
+  color: #333; /* Customize the color */
+}
+
+/* Style for the navigation links */
+.nav-link {
+  font-size: 18px;
+  color: #333; /* Customize the link color */
+}
+
+.nav-link:hover {
+  color: #007bff; /* Customize the link color on hover */
+}
+
+/* Style for the active link */
+.nav-item.active .nav-link {
+  font-weight: bold;
+  color: #007bff; /* Customize the active link color */
+}
